@@ -1,0 +1,97 @@
+/*
+Theme Name: Highgrove Restaurant
+
+Adding support for language written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+http://codex.wordpress.org/Right_to_Left_Language_Support
+*/
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+.entry-meta li:before {
+    margin-right: 0;
+    margin-left: 5px;
+}
+
+.widget hr {
+    margin: 20px 0 15px auto;
+}
+
+@media (min-width: 768px) {
+
+    .dl-horizontal dt {
+        text-align: right;
+    }
+
+    .dl-horizontal dd {
+        margin-right: 90px;
+        margin-left: auto;
+    }
+
+}
+
+address i {
+    margin-right: auto;
+    margin-left: 15px;
+}
+
+.dropcap:first-letter {
+    float: right;
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+.search-submit {
+    right: auto;
+    left: 0;
+}
+
+.dropdown-menu > li > a {
+    padding: 15px 30px 15px 60px;
+}
+
+@media (min-width: 768px) {
+
+    #menu-side-menu {
+        margin-right: 0;
+        margin-left: -15px;
+    }
+
+}
+
+.reel .item {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+.reel .item:last-child {
+    margin-left: 0;
+}
+
+@media screen and (min-width: 768px) {
+
+    .reel .item {
+        margin-left: 30px;
+    }
+
+}
+
+.reel article {
+    text-align: right;
+}
+
+.board .entry-body {
+    float: right;
+}
+
+.board .entry-thumbnail {
+    float: right;
+}
+
+.board .item-inverse .entry-thumbnail {
+    float: left;
+}

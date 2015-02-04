@@ -1,0 +1,476 @@
+# Copyright (C) 2015 Lively Green
+# This file is distributed under the Themeforest.
+msgid ""
+msgstr ""
+"Project-Id-Version: HG Restaurant 1.1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/highgrove\n"
+"POT-Creation-Date: 2015-01-23 16:50:27+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:23
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:27
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: comments.php:28
+msgid "Comment"
+msgid_plural "Comments (%1$s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:36 comments.php:55
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:37 comments.php:56
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:38 comments.php:57
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:62
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:75 comments.php:77
+msgid "Name"
+msgstr ""
+
+#: comments.php:78 comments.php:80
+msgid "Email"
+msgstr ""
+
+#: comments.php:81 comments.php:83
+msgid "Website"
+msgstr ""
+
+#: comments.php:85
+msgctxt "noun"
+msgid "Comment"
+msgstr ""
+
+#: comments.php:85
+msgid "Message"
+msgstr ""
+
+#: content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:21
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: content-none.php:30
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: content-simple.php:52 content.php:52
+msgid "Pages:"
+msgstr ""
+
+#. translators: %s: Name of current post
+#: content.php:45
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: footer.php:21
+msgid "2015. All rights reserved."
+msgstr ""
+
+#: functions.php:61
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:62
+msgid "Side Menu"
+msgstr ""
+
+#: header.php:26
+msgid "Skip to content"
+msgstr ""
+
+#: inc/actions.php:10
+msgid "Content Sidebar"
+msgstr ""
+
+#: inc/actions.php:12
+msgid "Content sidebar that appears on the right."
+msgstr ""
+
+#: inc/actions.php:19
+msgid "Footer Sidebar"
+msgstr ""
+
+#: inc/actions.php:21
+msgid "Appears in the footer section of the site."
+msgstr ""
+
+#: inc/extras.php:64
+msgid "Page %s"
+msgstr ""
+
+#: inc/post-types.php:9
+msgid "Sections"
+msgstr ""
+
+#: inc/post-types.php:10
+msgid "Section"
+msgstr ""
+
+#: inc/post-types.php:11
+msgid "All Sections"
+msgstr ""
+
+#: inc/post-types.php:12
+msgid "Add New Section"
+msgstr ""
+
+#: inc/post-types.php:13
+msgid "Edit Section"
+msgstr ""
+
+#: inc/post-types.php:14
+msgid "New Section"
+msgstr ""
+
+#: inc/post-types.php:15
+msgid "View Section"
+msgstr ""
+
+#: inc/post-types.php:16
+msgid "Search Sections"
+msgstr ""
+
+#: inc/post-types.php:17
+msgid "No sections found."
+msgstr ""
+
+#: inc/post-types.php:18
+msgid "No sections found in Trash."
+msgstr ""
+
+#: inc/post-types.php:33
+msgid "Events"
+msgstr ""
+
+#: inc/post-types.php:34
+msgid "Event"
+msgstr ""
+
+#: inc/post-types.php:35
+msgid "All Events"
+msgstr ""
+
+#: inc/post-types.php:36
+msgid "Add New Event"
+msgstr ""
+
+#: inc/post-types.php:37
+msgid "Edit Event"
+msgstr ""
+
+#: inc/post-types.php:38
+msgid "New Event"
+msgstr ""
+
+#: inc/post-types.php:39
+msgid "View Event"
+msgstr ""
+
+#: inc/post-types.php:40
+msgid "Search Events"
+msgstr ""
+
+#: inc/post-types.php:41
+msgid "No events found."
+msgstr ""
+
+#: inc/post-types.php:42
+msgid "No events found in Trash."
+msgstr ""
+
+#: inc/post-types.php:58
+msgid "Dishes"
+msgstr ""
+
+#: inc/post-types.php:59
+msgid "Dish"
+msgstr ""
+
+#: inc/post-types.php:60
+msgid "All Dishes"
+msgstr ""
+
+#: inc/post-types.php:61
+msgid "Add New Dish"
+msgstr ""
+
+#: inc/post-types.php:62
+msgid "Edit Dish"
+msgstr ""
+
+#: inc/post-types.php:63
+msgid "New Dish"
+msgstr ""
+
+#: inc/post-types.php:64
+msgid "View Dish"
+msgstr ""
+
+#: inc/post-types.php:65
+msgid "Search Dishes"
+msgstr ""
+
+#: inc/post-types.php:66
+msgid "No dishes found."
+msgstr ""
+
+#: inc/post-types.php:67
+msgid "No dishes found in Trash."
+msgstr ""
+
+#: inc/shortcodes.php:355
+msgid "Facebook"
+msgstr ""
+
+#: inc/shortcodes.php:356
+msgid "Twitter"
+msgstr ""
+
+#: inc/shortcodes.php:357
+msgid "Google+"
+msgstr ""
+
+#: inc/shortcodes.php:358
+msgid "Instagram"
+msgstr ""
+
+#: inc/shortcodes.php:359
+msgid "YouTube"
+msgstr ""
+
+#: inc/shortcodes.php:360
+msgid "Tumblr"
+msgstr ""
+
+#: inc/shortcodes.php:361
+msgid "Pinterest"
+msgstr ""
+
+#: inc/shortcodes.php:362
+msgid "LinkedIn"
+msgstr ""
+
+#: inc/template-tags.php:22
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/template-tags.php:26
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: inc/template-tags.php:30
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/template-tags.php:57
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:60
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">Previous Post</span><br>%title"
+msgstr ""
+
+#: inc/template-tags.php:61
+msgctxt "Next post link"
+msgid "<span class=\"meta-nav\">Next Post</span><br>%title"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:77
+msgid ", "
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:140
+msgid "Leave a comment"
+msgstr ""
+
+#: inc/template-tags.php:140
+msgid "1 Comment"
+msgstr ""
+
+#: inc/template-tags.php:140
+msgid "% Comments"
+msgstr ""
+
+#: inc/template-tags.php:144 inc/template-tags.php:344
+msgid "Edit"
+msgstr ""
+
+#: inc/template-tags.php:161
+msgid "Category: %s"
+msgstr ""
+
+#: inc/template-tags.php:163
+msgid "Tag: %s"
+msgstr ""
+
+#: inc/template-tags.php:165
+msgid "Author: %s"
+msgstr ""
+
+#: inc/template-tags.php:167
+msgid "Year: %s"
+msgstr ""
+
+#: inc/template-tags.php:167
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: inc/template-tags.php:169
+msgid "Month: %s"
+msgstr ""
+
+#: inc/template-tags.php:169
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: inc/template-tags.php:171
+msgid "Day: %s"
+msgstr ""
+
+#: inc/template-tags.php:171
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#: inc/template-tags.php:173
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr ""
+
+#: inc/template-tags.php:175
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr ""
+
+#: inc/template-tags.php:177
+msgctxt "post format archive title"
+msgid "Images"
+msgstr ""
+
+#: inc/template-tags.php:179
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr ""
+
+#: inc/template-tags.php:181
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr ""
+
+#: inc/template-tags.php:183
+msgctxt "post format archive title"
+msgid "Links"
+msgstr ""
+
+#: inc/template-tags.php:185
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr ""
+
+#: inc/template-tags.php:187
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr ""
+
+#: inc/template-tags.php:189
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr ""
+
+#: inc/template-tags.php:191
+msgid "Archives: %s"
+msgstr ""
+
+#. translators: 1: Taxonomy singular name, 2: Current taxonomy term
+#: inc/template-tags.php:195
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: inc/template-tags.php:197
+msgid "Archives"
+msgstr ""
+
+#: inc/template-tags.php:334
+msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">says:</span>"
+msgstr ""
+
+#: inc/template-tags.php:337
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#. translators: 1: date, 2: time
+#: inc/template-tags.php:344
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: index.php:59
+msgid "Previous page"
+msgstr ""
+
+#: index.php:60
+msgid "Next page"
+msgstr ""
+
+#: index.php:61
+msgid "Page"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "HG Restaurant"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://www.livelygreen.com/themes/highgrove/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Modern Restaurant Theme"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Lively Green"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://themeforest.net/user/LivelyGreen"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Front Page"
+msgstr ""
