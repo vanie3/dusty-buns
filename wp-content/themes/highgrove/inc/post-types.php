@@ -73,7 +73,7 @@ function highgrove_post_types() {
         'exclude_from_search' => true,
         'menu_position' => 6,
         'menu_icon' => 'dashicons-carrot',
-        'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields', 'comments', 'revisions' ),
+        'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields', 'comments', 'revisions'),
         'taxonomies' => array( 'highgrove_dish_category', 'post_tag' ),
         'has_archive' => true,
         'rewrite' => array( 'slug' => 'menu' ),

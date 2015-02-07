@@ -902,7 +902,7 @@ function highgrove_menu( $atts, $content = null ) {
 
     $menu = shortcode_atts( array(
         'id' => null,
-        'cols' => 4,
+        'cols' => 3,
         'columns' => null,
         'compact' => true,
         'filters' => true,
