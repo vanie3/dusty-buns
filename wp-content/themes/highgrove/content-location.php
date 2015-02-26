@@ -19,9 +19,11 @@
 		<div class="container">
 
             <h1 class="entry-title<?php if ( $title_class = get_field( '_lg_title_class' ) ) echo ' ' . esc_attr( $title_class ); ?>"><?php echo ( ( $title_text = get_field( '_lg_title_text' ) ) ? $title_text : get_the_title() ); ?></h1>
+<!--==========Modified by greg===========-->
             <?php
                 echo types_render_field("excerpt", array("output"=>"value1"));
             ?>
+<!--==================================-->
             <?php if ( get_field( '_lg_header_break' ) == '1' ) : ?><hr><?php endif; ?>
 
 		</div>
@@ -38,7 +40,14 @@
                     <?php the_content(); ?>
                 </div>
                 <div class="col-md-9">
-                    <?php echo do_shortcode('[menu]'); ?>
+<!--ADDED BY GREG FOR LOCATION FILTER-->
+                    <?php 
+                        $terms = get_the_terms( $post->ID, 'location' );
+                        $location = array_shift($terms);
+
+                        echo do_shortcode('[menu location="' . $location->slug . '"]'); 
+                    ?>
+<!--================================-->
                 </div>
             </div>
         </div>

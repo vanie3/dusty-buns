@@ -381,7 +381,7 @@ function highgrove_blockquote( $atts, $content = null ) {
         $header .= '<header>';
         $header .= get_avatar( $user->ID, 128 );
         $header .= '<h4 class="title">' . ( $user->first_name ? $user->first_name . ' ' . $user->last_name : 'The Chef' ) . '</h4>';
-        $header .= '<p>' . get_the_author_meta( 'nickname', $user->ID ) . '</p>';
+        // $header .= '<p>' . get_the_author_meta( 'nickname', $user->ID ) . '</p>';
         $header .= '</header>';
     }
 
@@ -505,7 +505,8 @@ function highgrove_nav_item( $atts, $content = null ) {
     $data .= ( $highgrove_nav['toggle'] ) ? ' role="' . esc_attr( $highgrove_nav['toggle'] ) . '" data-toggle="' . esc_attr( $highgrove_nav['toggle'] ) . '"' : '';
     $data .= ( $item['filter'] ) ? ' data-filter="' . esc_attr( $item['filter'] ) . '"' : '';
 
-    return '<li' . $class . '><a href="' . esc_url( $target ) . '"' . $data . '>' . do_shortcode( $content ) . '</a></li>';
+    return '<li' . $class . '><a href="#' . esc_url( $target ) . '"' . $data . '>' . do_shortcode( $content ) . '</a></li>';
+
 }
 add_shortcode( 'nav-item', 'highgrove_nav_item' );
 
@@ -714,7 +715,6 @@ function highgrove_reel( $atts, $content = null ) {
 add_shortcode( 'reel', 'highgrove_reel' );
 
 function highgrove_isotope( $atts, $content = null ) {
-
     if ( ! empty( $atts['columns'] ) ) {
         $atts['cols'] = $atts['columns'];
     }
@@ -748,9 +748,19 @@ function highgrove_isotope( $atts, $content = null ) {
                 )
             );
         }
-
+/*=====ADDED BY GREG FOR LOCATION FILTER=====*/
+        if ( ! empty( $atts['location'] ) ) {
+            $args['tax_query'] = array(
+                array(
+                    'taxonomy' => 'location',
+                    'field' => 'slug',
+                    'terms' => $atts['location']
+                )
+            );
+        }
+/*===========================================*/
         $posts = get_posts( $args );
-
+        
         $content = '';
         foreach ( $posts as $post ) {
 
@@ -829,7 +839,13 @@ function highgrove_isotope_item( $atts, $content = null ) {
 
     $output = '<div class="' . esc_attr( $class ) . '">';
     ob_start();
-    include( locate_template( 'content-simple.php' ) );
+/*=== Modified for dish and normal posts ===*/
+    if (is_home()) {
+        include( locate_template( 'content-simple.php' ) );
+    } else {
+        include( locate_template( 'content-menu.php' ) );
+    }
+ /*=========================================*/   
     $output .= ob_get_clean();
     $output .= '</div>';
 
@@ -895,7 +911,6 @@ function highgrove_board_item( $atts, $content = null ) {
 add_shortcode( 'board-item', 'highgrove_board_item' );
 
 function highgrove_menu( $atts, $content = null ) {
-
     if ( ! empty( $atts['columns'] ) ) {
         $atts['cols'] = $atts['columns'];
     }
@@ -916,7 +931,7 @@ function highgrove_menu( $atts, $content = null ) {
     $filters_tags = ( ! empty( $menu['filters_tags'] ) ) ? ' filters_tags="' . $menu['filters_tags'] . '"' : '';
     $category = ( $menu['category'] ) ? ' dish_category="' . $menu['category'] . '"' : '';
 
-    $output = '[isotope ' . $cols . $compact . $filters . $filters_tags . ' post_type="highgrove_dish"' . $category . ']';
+    $output = '[isotope location="' . $atts['location'] . '" ' . $cols . $compact . $filters . $filters_tags . ' post_type="highgrove_dish"' . $category . ']';
 
     return do_shortcode( $output );
 }

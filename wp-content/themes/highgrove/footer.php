@@ -28,6 +28,48 @@
 </div>
 
 <?php wp_footer(); ?>
+<!-- Added thi after the wp_footer so the pop up can be relative to the body -->
+<?php if (is_front_page()): ?>
+	    <div class="container">
+        <?php
+            //get the pop-up custom post types
+            $type = 'pop-up';
+            $args = array(
+                'post_type'        => $type,
+                'post_status'      => 'publish',
+                'order'            => 'ASC',
+                'orderby'          => 'date',
+                'posts_per_page'   => 1,
+            );
+
+            $my_query = null;
+            $my_query = new WP_Query($args);
+        ?>
+        <div class="hidden-xs">
+	        <?php if ($my_query->have_posts()): while($my_query->have_posts()): $my_query->the_post();?>
+	            
+	                <div class="box">
+	                    <button>&#10006;</button>
+	                    <h3 class="h3"><?php the_title(); ?></h3>
+	                    <div class="content">
+	                        <?php the_content(); ?>
+	                    </div>
+	                </div>
+	            
+	        <?php endwhile; endif; wp_reset_postdata(); ?>	
+        </div>
+
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $(".box").hide();
+            });
+        });
+         
+    </script>
+<?php endif; ?>
 
 </body>
 </html>

@@ -16,6 +16,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link rel="shortcut icon" href="<?php if ( ! empty( $highgrove['opt-favicon']['url'] ) ) { echo esc_url( $highgrove['opt-favicon']['url'] ); } else { echo esc_url( get_template_directory_uri() . '/favicon.ico' ); } ?>">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <?php wp_head(); ?>
 </head>
 
@@ -41,8 +42,15 @@
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-collapse">
+<!-- Modified to show certain navigations for certain pages -->
+                <?php if (is_front_page()): ?>
                     <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav ' . ( is_rtl() ? 'navbar-right' : 'navbar-left' ) . ' nav-primary', 'fallback_cb' => 'highgrove_menu_fallback_cb', 'walker' => new BootstrapWalkerNavMenu() ) ); ?>
+                <?php else: ?>
+                    <?php wp_nav_menu( array( 'theme_location' => 'pages', 'container' => false, 'menu_class' => 'nav navbar-nav ' . ( is_rtl() ? 'navbar-right' : 'navbar-left' ) . ' nav-primary', 'fallback_cb' => 'highgrove_menu_fallback_cb', 'walker' => new BootstrapWalkerNavMenu() ) ); ?>
+
+                <?php endif; ?>
                     <?php wp_nav_menu( array( 'theme_location' => 'side', 'container' => false, 'menu_class' => 'nav navbar-nav ' . ( is_rtl() ? 'navbar-left' : 'navbar-right' ) . ' nav-side', 'fallback_cb' => false ) ); ?>
+<!--=====================================-->
                 </div>
             </div>
         </nav>

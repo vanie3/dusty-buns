@@ -7,7 +7,11 @@
  */
 ?>
 
+<!-- I added '#' before the php section reference and then took it off because its not needed -->
+<!--==============================================-->
 <section id="<?php echo esc_attr( $section['id'] ); ?>" class="<?php echo esc_attr( $class ); ?>"<?php echo $style; ?>>
+<!--==============================================-->
+<!--==============================================-->
 
     <?php
 

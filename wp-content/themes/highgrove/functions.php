@@ -44,7 +44,7 @@ function highgrove_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	add_theme_support( 'post-thumbnails', array( 'post', 'highgrove_event', 'highgrove_dish' ) );
+	add_theme_support( 'post-thumbnails', array( 'post', 'highgrove_event', 'highgrove_dish', 'highgrove_career' ) );
 
     // Set up the default post thumbnail size.
     set_post_thumbnail_size( 360, 240, true );
@@ -60,6 +60,9 @@ function highgrove_setup() {
 	register_nav_menus( array(
 		'primary'   => __( 'Primary Menu', 'highgrove' ),
         'side'      => __( 'Side Menu', 'highgrove' ),
+/*======== Added this in to try and get a custom nav for pages ========*/ 
+        'pages' => __('Page Menu', 'highgrove'),
+/*=====================================================================*/
 	) );
 
 	/*

@@ -79,8 +79,11 @@ function highgrove_post_types() {
         'rewrite' => array( 'slug' => 'menu' ),
     );
 
+
+
     register_post_type( 'highgrove_section', $args_section );
     register_post_type( 'highgrove_event', $args_event );
     register_post_type( 'highgrove_dish', $args_dish );
+    // register_post_type( 'highgrove_career', $args_career );
 }
 add_action( 'init', 'highgrove_post_types' );

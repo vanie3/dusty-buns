@@ -56,10 +56,12 @@ function highgrove_post_nav() {
 	<nav class="navigation post-navigation" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'highgrove' ); ?></h1>
 		<div class="nav-links">
+
 			<?php
 				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">Previous Post</span><br>%title', 'Previous post link', 'highgrove' ) );
 				next_post_link( '<div class="nav-next">%link</div>', _x( '<span class="meta-nav">Next Post</span><br>%title', 'Next post link', 'highgrove' ) );
 			?>
+			
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
 	<?php
@@ -300,8 +302,9 @@ function highgrove_post_thumbnail( $template = null ) {
     elseif ( is_single() ) :
         the_post_thumbnail( 'highgrove-large', array( 'class' => 'img-responsive' ) );
     else : ?>
-        <a href="<?php the_permalink(); ?>">
-            <i class="fa fa-link"></i>
+<!-- Commented out these lines because I didn't want an anchor tag on the image -->
+        <!-- <a href="<?php the_permalink(); ?>">
+            <i class="fa fa-link"></i> -->
             <?php
             if ( $template == 'simple' ) {
                 the_post_thumbnail( 'highgrove-medium', array( 'class' => 'img-responsive' ) );
@@ -309,7 +312,7 @@ function highgrove_post_thumbnail( $template = null ) {
                 the_post_thumbnail( 'highgrove-large', array( 'class' => 'img-responsive' ) );
             }
             ?>
-        </a>
+       <!--  </a> -->
     <?php endif;
 }
 

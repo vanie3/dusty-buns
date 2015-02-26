@@ -18,41 +18,49 @@
 
         <header class="entry-header">
 
-            <div class="entry-meta">
+<!--             <div class="entry-meta">
                 <?php highgrove_entry_categories(); ?>
-            </div>
+            </div> -->
 
             <?php
             if ( is_single() ) :
-                the_title( '<h1 class="entry-title">', '</h1>' );
+                the_title( '<h1 class="entry-title text-center">', '</h1>' );
             else :
                 the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
             endif;
             ?>
 
-            <?php if ( 'post' == get_post_type() ) : ?>
+<!--             <?php if ( 'post' == get_post_type() ) : ?>
             <ul class="entry-meta list-inline">
                 <?php highgrove_posted_on(); ?>
             </ul>
-            <?php endif; ?>
+            <?php endif; ?> -->
 
         </header>
 
         <div class="entry-content">
-            <?php
-            /* translators: %s: Name of current post */
-            the_content( sprintf(
-                __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'highgrove' ),
-                the_title( '<span class="screen-reader-text">"', '"</span>', false )
-            ) );
-            ?>
 
-            <?php
-            wp_link_pages( array(
-                'before' => '<div class="page-links">' . __( 'Pages:', 'highgrove' ),
-                'after'  => '</div>',
-            ) );
-            ?>
+            <?php if ( 'career' == get_post_type() ) : ?>
+                <div class="row center">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="">
+                            <?php the_content(); ?>
+                        </div>
+                    </div>
+                </div>
+            <?php else: ?>
+                <?php 
+                    the_content( sprintf(
+                        __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'highgrove' ),
+                        the_title( '<span class="screen-reader-text">"', '"</span>', false )
+                    ) );
+                    wp_link_pages( array(
+                        'before' => '<div class="page-links">' . __( 'Pages:', 'highgrove' ),
+                        'after'  => '</div>',
+                    ) );
+                ?>
+            <?php endif; ?>
+
         </div>
 
         <footer class="entry-footer">
@@ -61,17 +69,17 @@
             </div>
         </footer>
 
-        <?php
+<!--         <?php
 
         // Previous/next post navigation.
-        highgrove_post_nav();
+        // highgrove_post_nav();
 
-        // If comments are open or we have at least one comment, load up the comment template.
-        if ( comments_open() || get_comments_number() ) {
-            comments_template();
-        }
+        // // If comments are open or we have at least one comment, load up the comment template.
+        // if ( comments_open() || get_comments_number() ) {
+        //     comments_template();
+        // }
 
-        ?>
+        ?> -->
 
     </div>
 

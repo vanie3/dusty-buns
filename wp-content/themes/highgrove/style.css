@@ -44,6 +44,7 @@ and Blueprint http://www.blueprintcss.org/
 	12.6 Affix
 13.0 Helper classes
 14.0 Custom styles
+15.0 Alert Box
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -69,6 +70,7 @@ body {
     font-size: 1.6rem;
     font-weight: 300;
     line-height: 2;
+    overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -94,7 +96,7 @@ textarea {
 }
 
 a {
-    color: #d4a88c;
+    color: grey;
     border-bottom: 0;
     transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out;
     -webkit-transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -115,7 +117,7 @@ a:focus {
 }
 
 .img-thumbnail {
-    border: 4px solid #d4a88c;
+    border: 4px solid #bccf3d;
     box-sizing: content-box;
     -webkit-box-sizing: content-box;
 }
@@ -338,7 +340,7 @@ mark {
 hr {
     margin-top: 15px;
     margin-bottom: 15px;
-    border-color: #d4a88c;
+    border-color: #bccf3d;
 }
 
 hr.transparent {
@@ -376,8 +378,8 @@ input[type="date"]::-webkit-inner-spin-button{
 }
 
 input[type="submit"] {
-    background-color: #d4a88c;
-    border: 1px solid #d4a88c;
+    background-color: #ffc300;
+    border: 1px solid #ffc300;
     border-radius: 4px;
     color: #fff;
     font-family: "Roboto Slab", serif;
@@ -491,8 +493,8 @@ select {
 .btn-default {
     background-color: transparent;
     background-image: none;
-    border-color: #000;
-    color: #000;
+    border-color: #bccf3d;
+    color: #bccf3d;
     font-family: "Roboto Slab", serif;
     font-weight: 700;
     padding: 10px 15px;
@@ -506,8 +508,8 @@ select {
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-    background-color: #000;
-    border-color: #000;
+    background-color: #bccf3d;
+    border-color: #bccf3d;
     color: #fff;
 }
 
@@ -757,7 +759,7 @@ img {
 }
 
 .nav-isotope > li > a {
-    background-color: #525252;
+    background-color: #bccf3d;
     color: #fff;
     cursor: url("img/svg/crosshair-black.svg") 20 20, crosshair;
     padding: 60px 30px;
@@ -793,7 +795,7 @@ img {
     content: "";
     display: inline-block;
     width: 30px;
-    border-top: 1px solid #d4d4d4;
+    border-top: 1px solid #fff;
     vertical-align: top;
 }
 
@@ -825,7 +827,7 @@ img {
 .navbar-brand {
     height: 90px;
     border-bottom: 0;
-    font-family: "Droid Serif", serif;
+    font-family: "Pacifico", serif;
     font-size: 3.6rem;
     font-style: italic;
     font-weight: 700;
@@ -926,7 +928,7 @@ img {
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-    color: #d4a88c;
+    color: #bccf3d;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -937,7 +939,7 @@ img {
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    color: #d4a88c;
+    color: #bccf3d;
 }
 
 .navbar-default .navbar-nav > .open > a,
@@ -1008,7 +1010,8 @@ img {
 }
 
 .navbar-inverse .navbar-nav > li > a:hover {
-    border-color: #fff;
+    border-color: #bccf3d;
+    background-color: #bccf3d;
 }
 
 .navbar-inverse .navbar-nav > .open > a,
@@ -1088,6 +1091,7 @@ header,
 footer {
     position: relative;
     line-height: 1.75;
+
 }
 
 header > p {
@@ -1118,9 +1122,10 @@ header > p {
 
 .site-info {
     position: relative;
-    background-image: url("img/bg-copyright.jpg");
+    background-image: url("img/bg-footer.jpg");
+    /*background-image: url("img/bg-copyright.jpg");*/
     background-size: cover;
-    color: #d4a88c;
+    color: #ffc300;
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.25;
@@ -1158,6 +1163,7 @@ header > p {
 
 .site-supplementary {
     background-color: #fff;
+    margin-bottom: 40px;
 }
 
 /*--------------------------------------------------------------
@@ -1195,7 +1201,8 @@ header > p {
 }
 
 .section-header p {
-    color: #d4a88c;
+    padding-top: 20px;
+    color: #bccf3d;
     font-family: "Roboto Slab", serif;
     font-size: 1.4rem;
     font-weight: 400;
@@ -1209,8 +1216,8 @@ header > p {
 }
 
 .section-title {
-    color: #000;
-    font-family: "Roboto Slab", serif;
+    color: #ffc300;
+    font-family: "Pacifico", serif;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -1253,6 +1260,7 @@ header > p {
 
     .section-header p {
         font-size: 1.6rem;
+        padding-top: 25px;
     }
 
     .section-title.title-lg {
@@ -1313,6 +1321,9 @@ article {
 .entry-body {
     position: relative;
     padding: 45px 30px;
+}
+.marg{
+    margin-top: 30px;
 }
 
 .type-highgrove_event .entry-body {
@@ -1378,7 +1389,7 @@ article {
     margin-bottom: 15px;
 }
 
-.entry-header p {
+/*.entry-header p {
     color: #d4a88c;
     font-family: "Roboto Slab", serif;
     font-size: 1.4rem;
@@ -1386,7 +1397,7 @@ article {
     letter-spacing: 0.5px;
     margin-bottom: 0;
     text-transform: uppercase;
-}
+}*/
 
 .entry-header hr {
     border-top: 0;
@@ -1397,20 +1408,20 @@ article {
     content: "";
     display: inline-block;
     width: 30px;
-    border-top: 1px solid #d4a88c;
+    border-top: 1px solid #fff;
     vertical-align: top;
 }
 
 .entry-header.bg-dark hr:before {
     border-color: #fff;
 }
-
+/*=== CHANGED COLOR FROM BLACK TO #D4A88C ===*/
 .entry-title {
-    color: #000;
+    color: #ffc300;
     margin-top: 0;
     margin-bottom: 0;
 }
-
+/*===========================================*/
 .bg-dark .entry-title {
     color: #fff;
 }
@@ -1423,26 +1434,37 @@ article {
 
 .type-page .entry-title,
 .type-highgrove_event .entry-title {
-    font-family: "Roboto Slab", serif;
+    font-family: "Pacifico", serif;
 }
 
 .template-simple .entry-title {
     font-family: "Roboto", sans-serif;
     font-size: 2.1rem;
-    overflow: hidden;
+    /*overflow: hidden;*/
     text-overflow: ellipsis;
-    white-space: nowrap;
+    /*white-space: nowrap;*/
 }
-
+/*=== SWITCHED THE .ENTRY-TITLE A & .ENTRY-TITLE A:HOVER COLORS ===*/
 .entry-title a {
-    color: #000;
+    color: #ffc300;
 }
 
 .entry-title a:hover,
 .entry-title a:focus {
-    color: #d4a88c;
+    color: #000;
 }
-
+/*==================================================================*/
+/*========= changed copy and pasted .entry-title a to .entry-title p =========*/
+.entry-title p {
+    color: #bccf3d;
+    font-family: "Roboto", serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+/*=============================================================*/
 @media screen and (min-width: 768px) {
 
     .entry-header {
@@ -1479,10 +1501,10 @@ article {
     overflow: hidden;
 }
 
-.entry-thumbnail img {
+/*.entry-thumbnail img {
     transition: border-color 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     -webkit-transition: border-color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-}
+}*/
 
 .entry-thumbnail a {
     position: relative;
@@ -1500,23 +1522,23 @@ article {
     -webkit-transition: opacity 0.3s ease-in-out;
 }
 
-.type-highgrove_event .entry-thumbnail img,
+/*.type-highgrove_event .entry-thumbnail img,
 .type-highgrove_dish .entry-thumbnail img {
     cursor: url("img/svg/crosshair.svg") 20 20, crosshair;
-}
+}*/
 
-.type-highgrove_event .entry-thumbnail:hover img {
+/*.type-highgrove_event .entry-thumbnail:hover img {
     opacity: 0.6;
     transform: scale(1.1) rotate(2deg) translateZ(0);
     -webkit-transform: scale(1.1) rotate(2deg) translateZ(0);
-}
+}*/
 
 .type-highgrove_dish .entry-thumbnail .img-thumbnail {
-    border-color: rgba(212, 168, 140, 0.3);
+    /*border-color: rgba(212, 168, 140, 0.3);*/
 }
 
 .type-highgrove_dish .entry-thumbnail:hover .img-thumbnail {
-    border-color: rgba(212, 168, 140, 1);
+    border-color: #bccf3d;
 }
 
 .entry-meta {
@@ -1588,7 +1610,7 @@ article {
 }
 
 .template-simple .price {
-    color: #d4a88c;
+    color: #bccf3d;
     font-size: 3.2rem;
     font-weight: 400;
     line-height: 1.1;
@@ -1637,11 +1659,14 @@ article {
 .sidebar {
     position: relative;
     font-size: 1.6rem;
-    padding: 90px 0;
+/*=== CHANGED FROM 90PX 0PX TO 20PX 0PX ===*/
+    padding: 20px 0;
+/*=========================================*/
 }
 
 .widget {
     margin-bottom: 45px;
+    text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -1659,13 +1684,14 @@ article {
 .widget hr {
     width: 30px;
     border-color: #d4d4d4;
-    margin: 20px auto 15px 0;
+    margin: 0 auto;
 }
 
 .widget-title {
-    color: #000;
+    color: #ffc300;
     font-size: 2.1rem;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .sidebar-footer .widget {
@@ -1673,7 +1699,7 @@ article {
 }
 
 .sidebar-footer .widget-title {
-    color: #d4a88c;
+    color: #ffc300;
 }
 
 .tagcloud {
@@ -1808,6 +1834,9 @@ article {
 .bg-image .panel {
     background-color: #fff;
     padding: 60px 30px;
+/*====ADDED MIN-HEIGHT FOR THE LOCATIONS PANELS====*/
+    min-height: 527px;
+/*========================*/
 }
 
 .panel-heading {
@@ -1819,7 +1848,7 @@ article {
 }
 
 .panel-heading > i {
-    color: #d4a88c;
+    color: #bccf3d;
     font-size: 3.2rem;
     margin-bottom: 15px;
     padding: 24px;
@@ -1913,7 +1942,7 @@ article {
 }
 
 #reservation-panel .form-control {
-    cursor: url("img/svg/crosshair.svg") 20 20, crosshair;
+/*    cursor: url("img/svg/crosshair.svg") 20 20, crosshair;*/
 }
 
 #reservation-panel .wpcf7-form-control {
@@ -1954,11 +1983,11 @@ article {
 }
 
 .carousel-indicators li {
-    border-color: #d4a88c;
+    border-color: #bccf3d;
 }
 
 .carousel-indicators .active {
-    background-color: #d4a88c;
+    background-color: #bccf3d;
 }
 
 .carousel blockquote {
@@ -1990,7 +2019,7 @@ article {
 
 .reel-left:hover,
 .reel-right:hover {
-    background-color: #d4a88c;
+    background-color: #bccf3d;
 }
 
 .reel .item {
@@ -2004,11 +2033,12 @@ article {
 .reel .item:last-child {
     margin-right: 0;
 }
-
+/*=== ADDED THE MIN-HEIGHT SO POSTS CAN BE EVEN IN HEIGHT ===*/
 .reel article {
     text-align: left;
+    min-height: 317px;
 }
-
+/*===========================================================*/
 .reel .entry-thumbnail {
     width: 240px;
     height: 160px;
@@ -2035,11 +2065,11 @@ article {
     opacity: 1;
 }
 
-.reel .entry-thumbnail:hover img {
+/*.reel .entry-thumbnail:hover img {
     opacity: 0.6;
     transform: scale(1.1) rotate(0.01deg) translateZ(0);
     -webkit-transform: scale(1.1) rotate(0.01deg) translateZ(0);
-}
+}*/
 
 @media screen and (min-width: 768px) {
 
@@ -2073,16 +2103,19 @@ article {
 }
 
 .isotope .item-alter {
-    background-image: url("img/bg-alter.png");
+    /*background-image: url("img/bg-alter.png");*/
+    background-color: #ffc300;
+    color: #fff;
 }
 
 .isotope .item-primary {
-    background-color: #f6e2e1;
-    color: #a23d3e;
+    background-color: #bccf3d;
+    color: #fff;
 }
 
 .isotope .item-secondary {
-    background-color: #fdfde0;
+    background-color: #bccf3d;
+    color: #fff;
 }
 
 .isotope .column-sizer {
@@ -2191,20 +2224,20 @@ article {
 }
 
 .board .entry-header i {
-    color: #d4a88c;
+    color: #fff;
     font-size: 2.4rem;
 }
 
 .board .item-primary .entry-header i {
-    color: #a23d3e;
+    color: #fff;
 }
 
 .board .item-primary .entry-header hr:before {
-    border-color: #a23d3e;
+    border-color: #fff;
 }
 
 .board .entry-title {
-    color: #d4a88c;
+    color: #fff;
     font-family: "Roboto Slab", serif;
     font-size: 1.4rem;
     letter-spacing: 0.5px;
@@ -2213,7 +2246,7 @@ article {
 }
 
 .board .item-primary .entry-title {
-    color: #a23d3e;
+    color: #fff;
 }
 
 .board .entry-content {
@@ -2223,14 +2256,14 @@ article {
 
 .board .entry-content i {
     display: block;
-    color: #d4a88c;
+    color: #fff;
     font-style: normal;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 .board .item-primary .entry-content i {
-    color: #a23d3e;
+    color: #fff;
 }
 
 .board .entry-content .bullet {
@@ -2239,7 +2272,7 @@ article {
 
 .board .entry-content b {
     display: block;
-    color: #000;
+    color: #fff;
     font-size: 1.8rem;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -2434,3 +2467,84 @@ article {
 #reservation {
     background-position: center;
 }
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+15.0 Alert Box
+--------------------------------------------------------------*/
+
+.box{
+    background-color: rgba(245,245,245,0.9);
+    text-align: center;
+    position: fixed;
+    top:300px;
+    right: -300px;
+    z-index: 22;
+    width: 300px;
+}
+@keyframes movingbox {
+  0% {
+    right: -300px;
+  }
+
+  100% {
+    right: 0px;
+  }
+}
+@-webkit-keyframes movingbox {
+  0% {
+    right: -300px;
+  }
+
+  100% {
+    right: 0px;
+  }
+}
+.box {
+    animation: movingbox 3s;
+    animation-fill-mode: forwards;
+  -webkit-animation: movingbox 3s;
+  -webkit-animation-fill-mode: forwards;
+    box-shadow: -5px 5px 11px 0px rgba(0,0,0,0.3);
+    -webkit-box-shadow: -5px 5px 11px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: -5px 5px 11px 0px rgba(0,0,0,0.3);
+}
+
+button {
+    transition: all 0.5s ease;
+    position: absolute;
+    background-color: #bccf3d;
+    padding: 0px 10px;
+    left: 0;
+    margin-left: -10px;
+    margin-top: -9px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    color: white;
+    -webkit-box-shadow: -4px -2px 6px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: -4px -2px 6px 0px rgba(0,0,0,0.1);
+    box-shadow: -3px 1px 6px 0px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    background-color: #c9d3c5;
+    color: #fff;
+}
+.h3 {
+    margin: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #fff;
+    background-color: #bccf3d;
+}
+.content{
+    padding: 10px 20px 0px 20px;
+}
+

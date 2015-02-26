@@ -19,7 +19,7 @@ function highgrove_widgets_init() {
         'name'          => __( 'Footer Sidebar', 'highgrove' ),
         'id'            => 'sidebar-3',
         'description'   => __( 'Appears in the footer section of the site.', 'highgrove' ),
-        'before_widget' => '<div class="item"><aside id="%1$s" class="widget %2$s">',
+        'before_widget' => '<div class="col-md-4 item"><aside id="%1$s" class="widget %2$s">',
         'after_widget'  => '</aside></div>',
         'before_title'  => '<h4 class="widget-title">',
         'after_title'   => '</h4><hr>',
