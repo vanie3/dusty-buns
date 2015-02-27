@@ -29,21 +29,21 @@ function highgrove_post_types() {
         'rewrite' => array( 'slug' => 'sections' ),
     );
 
-    $labels_event = array(
-        'name' => __( 'Events', 'highgrove' ),
-        'singular_name' => __( 'Event', 'highgrove' ),
-        'all_items' => __( 'All Events', 'highgrove' ),
-        'add_new_item' => __( 'Add New Event', 'highgrove' ),
-        'edit_item' => __( 'Edit Event', 'highgrove' ),
-        'new_item' => __( 'New Event', 'highgrove' ),
-        'view_item' => __( 'View Event', 'highgrove' ),
-        'search_items' => __( 'Search Events', 'highgrove' ),
-        'not_found' =>  __( 'No events found.', 'highgrove' ),
-        'not_found_in_trash' => __( 'No events found in Trash.', 'highgrove' ),
+    $labels_board = array(
+        'name' => __( 'Board Items', 'highgrove' ),
+        'singular_name' => __( 'Board Item', 'highgrove' ),
+        'all_items' => __( 'All Board Items', 'highgrove' ),
+        'add_new_item' => __( 'Add New Board Item', 'highgrove' ),
+        'edit_item' => __( 'Edit Board Item', 'highgrove' ),
+        'new_item' => __( 'New Board Item', 'highgrove' ),
+        'view_item' => __( 'View Board Item', 'highgrove' ),
+        'search_items' => __( 'Search Board Items', 'highgrove' ),
+        'not_found' =>  __( 'No board items found.', 'highgrove' ),
+        'not_found_in_trash' => __( 'No board items found in Trash.', 'highgrove' ),
     );
 
-    $args_event = array(
-        'labels' => $labels_event,
+    $args_board = array(
+        'labels' => $labels_board,
         'public' => true,
         'exclude_from_search' => true,
         'menu_position' => 5,
@@ -51,7 +51,7 @@ function highgrove_post_types() {
         'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields', 'comments', 'revisions' ),
         'taxonomies' => array( 'post_tag' ),
         'has_archive' => true,
-        'rewrite' => array( 'slug' => 'events' ),
+        'rewrite' => array( 'slug' => 'board-items' ),
     );
 
     $labels_dish = array(
@@ -79,10 +79,8 @@ function highgrove_post_types() {
         'rewrite' => array( 'slug' => 'menu' ),
     );
 
-
-
     register_post_type( 'highgrove_section', $args_section );
-    register_post_type( 'highgrove_event', $args_event );
+    register_post_type( 'highgrove_event', $args_board );
     register_post_type( 'highgrove_dish', $args_dish );
     // register_post_type( 'highgrove_career', $args_career );
 }

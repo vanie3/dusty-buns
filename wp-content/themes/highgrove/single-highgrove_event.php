@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all events
+ * The template for displaying all boards
  *
  * @package WordPress
  * @subpackage Highgrove
@@ -15,7 +15,7 @@ get_header(); ?>
 
         while ( have_posts() ) : the_post();
 
-            get_template_part( 'content', 'highgrove_event' );
+            get_template_part( 'content', 'highgrove_board' );
 
         endwhile;
 

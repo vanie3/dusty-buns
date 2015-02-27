@@ -32,8 +32,8 @@
 <?php if (is_front_page()): ?>
 	    <div class="container">
         <?php
-            //get the pop-up custom post types
-            $type = 'pop-up';
+            //get the alert custom post types
+            $type = 'alert';
             $args = array(
                 'post_type'        => $type,
                 'post_status'      => 'publish',
